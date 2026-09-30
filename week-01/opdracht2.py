@@ -333,7 +333,8 @@ player_name = 'Joost'
 level = 1
 demage = 10
 experience = 0
-for i in range (10):
+training = input('hoe vaak wil je trainen')
+for i in range (int(training)):
     experience += 20
     print (experience)
     if experience == 100:
