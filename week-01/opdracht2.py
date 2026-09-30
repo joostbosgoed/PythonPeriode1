@@ -87,8 +87,15 @@ else:
 #
 # Als dit zo is:
 # Print "Je hebt een schild!"
+health = 75
+has_shield = True
 
-
+if health >= 50:
+    print('je hebt genoeg helth')
+else:
+    print('je hebt te wijnig helth')
+if has_shield == True:
+    print('je hebt een shield')
 
 # Opdracht 5 - Mag je naar binnen?
 #
@@ -112,6 +119,14 @@ else:
 #
 # Test daarna wat er gebeurt als je de waardes verandert.
 
+age = 20
+has_ticket = True
+if age >= 20 and has_ticket == True:
+    print('je mag naar binnen')
+    
+else:
+    print('je mag niet naar binnen')
+
 
 
 # Opdracht 6 - Tellen
@@ -128,6 +143,11 @@ else:
 # 10
 #
 # Gebruik hiervoor range().
+a = 1
+for i in range (10):
+    print (a)
+    a = a + 1
+
 
 
 
@@ -146,6 +166,10 @@ else:
 # Gebruik de variabele uit je for-loop
 # om de berekening te maken.
 
+for i in range (11):
+    if i >0:
+        a= i * 5
+        print (a)
 
 
 # Opdracht 8 - Countdown
@@ -172,7 +196,12 @@ else:
 # 2
 # 1
 # GO!
+countdown = 10
 
+while countdown > 0:
+    print(countdown)
+    countdown = countdown - 1
+print('go!')
 
 
 # Opdracht 9 - Health verliezen
@@ -195,6 +224,10 @@ else:
 # Health: 20
 # Health: 0
 
+health = 100
+for i in range(5):
+    health = health -20
+    print(f'je hebt nog: {health} health')
 
 
 # Opdracht 10 - Even of oneven
@@ -219,7 +252,13 @@ else:
 # Bijvoorbeeld:
 # 4 % 2 == 0
 
-
+for i in range (11):
+    if i > 0:
+        a = i % 2
+        if a == 0:
+           print (f'{i} is even') 
+        else:
+            print(f'{i} is oneven')
 
 # Opdracht 11 - Vijanden verslaan - BONUS
 #
@@ -244,7 +283,12 @@ else:
 #
 # Daarna begint de volgende vijand.
 
-
+for i in range (5):
+    enemy_health = 30
+    while enemy_health > 0:
+        enemy_health = enemy_health - 10
+        print (f' de enemyt heeft {enemy_health}')
+    print('je hebt de enemy vermoord')
 
 # Eindopdracht - Player Training - BONUS
 #
@@ -283,3 +327,22 @@ else:
 # Voeg health en damage toe aan je speler.
 # Iedere keer dat de speler een level omhoog gaat,
 # krijgt hij 5 extra damage.
+
+
+player_name = 'Joost'
+level = 1
+demage = 10
+experience = 0
+for i in range (10):
+    experience += 20
+    print (experience)
+    if experience == 100:
+        level += 1
+        demage += 5
+        print('level up')
+        print(f'je bent nu level {level}')
+        experience = 0
+print('traning voltoit')
+print(f'level: {level}')
+print(f'experience: {experience}')
+print(f'je hbet nu {demage} demage')
